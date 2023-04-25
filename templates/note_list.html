@@ -1,0 +1,35 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Блокнотик с контентиком
+{% endblock %}
+
+{% block page-lead %}
+Все термины извлекаются из БД/файла и динамически вставляются в таблицу.
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="notes-table">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">#</th>
+              <th scope="col" class="py-3">Контентик</th> #
+              <th scope="col" class="py-3">Ссылочка на просмотр</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cnt, note, comment in notes %}
+            <tr>
+                <td class="py-3">{{ cnt }}</td>
+                <td class="py-3">{{  }}</td>
+                <td class="py-3">{{  }}</td>
+                <td class="py-3">{{  }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+{% endblock %}
