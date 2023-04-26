@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block page-lead %}
-Все термины извлекаются из БД/файла и динамически вставляются в таблицу.
+Здесь находится список с различными полезностями в виде рекомендаций с комментариями. Например, фильмы или различные статьи.
 {% endblock %}
 
 {% block content %}
@@ -16,15 +16,18 @@
             <tr>
               <th scope="col" class="py-3">#</th>
               <th scope="col" class="py-3">Контентик</th> #
+              <th scope="col" class="py-3">Комментарий</th>
               <th scope="col" class="py-3">Ссылочка на просмотр</th>
+
             </tr>
           </thead>
           <tbody>
-            {% for cnt, note, comment in notes %}
+            {% for cnt, note, link, comment in notes %}
             <tr>
                 <td class="py-3">{{ cnt }}</td>
                 <td class="py-3">{{ note }}</td>
                 <td class="py-3">{{ comment }}</td>
+                <td class="py-3">{{ link }}</td>
             </tr>
             {% endfor %}
           </tbody>

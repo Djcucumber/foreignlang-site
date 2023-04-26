@@ -3,8 +3,8 @@ def get_notes_for_table():
     with open("./data/notes.csv", "r", encoding="utf-8") as f:
         cnt = 1
         for line in f.readlines()[1:]:
-            note, comment, source = line.split(";")
-            notes.append([cnt, note, comment])
+            note, link, comment, source = line.split(";")
+            notes.append([cnt, note, link, comment])
             cnt += 1
     return notes
 

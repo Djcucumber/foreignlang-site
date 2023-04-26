@@ -59,17 +59,21 @@ def send_note(request):
         cache.clear()
         user_name = request.POST.get("name")
         new_note = request.POST.get("new_note", "")
-        new_comment = request.POST.get("new_comment", "").replace(";", ",")
+        new_comment = request.POST.get("new_comment", "")
+        new_link = request.POST.get("new_link", "").replace(";", ",")
         context = {"user": user_name}
         if len(new_comment) == 0:
             context["success"] = False
             context["comment"] = "Описание должно быть не пустым"
         elif len(new_note) == 0:
             context["success"] = False
-            context["comment"] = "Термин должен быть не пустым"
+            context["comment"] = "Запись должна быть не пустой"
+        elif len(new_link) == 0:
+            context["success"] = False
+            context["comment"] = "Запись должна быть не пустой(Поставьте хотя бы \"-\")"
         else:
             context["success"] = True
-            context["comment"] = "Ваш термин принят"
+            context["comment"] = "Ваша запись принята"
             notes_work.write_note(new_note, new_comment)
         if context["success"]:
             context["success-title"] = ""
