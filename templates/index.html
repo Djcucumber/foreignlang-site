@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
-    <h2 class="pb-2 border-bottom">Что есть на этом прототипе сайта</h2>
+    <h2 class="pb-2 border-bottom">Запоминание слов</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -53,13 +53,6 @@
                     Изучить(так-так-так, что тут у нас?)
                 </a>
             </div>
-
-            <div>
-                <h3 class="fs-2">Блокнотик с полезностями</h3>
-                <p>Здесь находится список с полезным контентом для прокачки своего английскогою <br>
-                А именно:видео, фильмы, книги, статьи, тексты песен.</p>
-                <a href="/note-list" class="btn btn-primary">Начать(ЛЭЭЭТС ГО!)</a>
-            </div>
         </div>
         <div class="col d-flex">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -69,17 +62,36 @@
             </div>
         </div>
     </div>
-    <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Добавить ещё одну форму</h4>
+    <h2 class="pb-2 border-bottom">Контент для погружения в язык</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+        <div class="col-lg-6">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+            </div>
+             <div>
+                <h3 class="fs-2">Блокнотик с полезностями</h3>
+                <p>Здесь находится список с полезным контентом для прокачки своего английскогою <br>
+                А именно:видео, фильмы, книги, статьи, тексты песен.</p>
+                <a href="/notes-list" class="btn btn-primary">Начать(ЛЭЭЭТС ГО!)</a>
+            </div>
         </div>
-        <div class="col-lg-8">
-            <p>Чтобы получить максимальную оценку по проекту, нужно две страницы, которые <span class="fst-italic">показывают</span>
-            контент, а две страницы, которые <span class="fst-italic">принимают</span> контент. Одна страница с
-            POST-запросом создана — это <a href="/add-term">форма сбора терминов</a>. Добавьте ещё одну форму и view, обрабатывающий её!</p>
+        <div class="col-lg-6">
+            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+            </div>
+            <div>
+                <h3 class="fs-2">Форма для добавления новой записи в блокнотик</h3>
+                <p>Пример POST-запроса, который отправится после того, как вы заполните форму. Он допишет термин в ваш
+                    текстовый файл, и если всё будет успешно — вас перенаправят на страницу терминов</p>
+                <a href="/add-note" class="btn btn-primary">Заполнить душевную пустоту и форму</a>
+            </div>
         </div>
     </div>
+    <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="col-lg-4">
             <h4 class="py-1">Разнообразить контент</h4>
