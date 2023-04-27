@@ -3,14 +3,14 @@ def get_terms_for_table():
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         cnt = 1
         for line in f.readlines()[1:]:
-            term, definition, source = line.split(";")
-            terms.append([cnt, term, definition])
+            term, transcription, definition, source = line.split(";")
+            terms.append([cnt, term, transcription, definition])
             cnt += 1
     return terms
 
 
-def write_term(new_term, new_definition):
-    new_term_line = f"{new_term};{new_definition};user"
+def write_term(new_term, new_transcription, new_definition):
+    new_term_line = f"{new_term};{new_transcription};{new_definition};user"
     with open("./data/terms.csv", "r", encoding="utf-8") as f:
         existing_terms = [l.strip("\n") for l in f.readlines()]
         title = existing_terms[0]
