@@ -3,15 +3,15 @@ def get_notes_for_table():
     with open("./data/notes.csv", "r", encoding="utf-8") as f:
         cnt = 1
         for line in f.readlines()[1:]:
-            note, link, comment, source = line.split(";")
-            notes.append([cnt, note, link, comment])
+            note, comment, link, source = line.split(";")
+            notes.append([cnt, note, comment, link])
             cnt += 1
     return notes
 
 
-def write_note(new_note, new_comment):
-    new_note_line = f"{new_note};{new_comment};user"
-    with open("./data/terms.csv", "r", encoding="utf-8") as f:
+def write_note(new_note, new_comment, new_link):
+    new_note_line = f"{new_note};{new_comment};{new_link};user"
+    with open("./data/notes.csv", "r", encoding="utf-8") as f:
         existing_notes = [l.strip("\n") for l in f.readlines()]
         title = existing_notes[0]
         old_notes = existing_notes[1:]

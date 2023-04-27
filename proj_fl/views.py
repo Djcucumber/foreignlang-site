@@ -74,7 +74,7 @@ def send_note(request):
         else:
             context["success"] = True
             context["comment"] = "Ваша запись принята"
-            notes_work.write_note(new_note, new_comment)
+            notes_work.write_note(new_note, new_comment, new_link)
         if context["success"]:
             context["success-title"] = ""
         return render(request, "note_request.html", context)
