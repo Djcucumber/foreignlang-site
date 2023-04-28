@@ -5,26 +5,25 @@
 {% endblock %}
 
 {% block page-lead %}
-Когда вы нажмёте на кнопку &laquo;Отправить&raquo;, веб-приложению отправится POST-запрос.
-При этом в полях <span class="fst-italic">Имя</span> и <span class="fst-italic">Email</span> есть атрибут
-<code>value required</code>, который подсказывает пользователю о необходимости заполнения — это свойство Bootstrap.
+Здесь Вы можете добавить запись в блокнотик. <br>
+Можете посмотреть рекомендацию фильма или наоборот посоветовать другим.
 {% endblock %}
 
 
 {% block content %}
-<div class="container-sm px-5 py-5" id="note-form">
+<div id="note-form">
     <form method="post">
         <div class="row px-5 py-2">
             <h3>Ваши контактные данные</h3>
         </div>
         <div class="row px-5 py-2">
-            <div class="col-md-6">
+            <div class="col s6 m6 l6">
                 <label for="name">Ваше имя:</label>
-                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Иван" value required>
+                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Умерчик" value required>
             </div>
-            <div class="col-md-6">
+            <div class="col s6 m6 l6">
                 <label for="email">Ваш контактный email:</label>
-                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="ivan@ivanov.com" value required>
+                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="pochta@zubdayuchtopochta.com" value required>
             </div>
         </div>
         <div class="row px-5 py-2">

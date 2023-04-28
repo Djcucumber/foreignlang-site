@@ -11,51 +11,49 @@
 {% endblock %}
 
 {% block content %}
-<div class="container px-4 py-5" id="project-contents">
-    <h2 class="pb-2 border-bottom">Запоминание слов</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+<div id="project-contents">
+    <h2>Запоминание слов</h2>
+    <div class="row">
+        <div class="col s4 m4 l4">
+            <div>
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Словарик</h3>
+                <h3 class="brown-text">Словарик</h3>
                 <p>Здесь Вы можете вводить новые для Вас слова и их перевод.</p>
                 <a href="/terms-list" class="btn btn-primary">Вау! Хочу глянуть</a>
             </div>
         </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <div class="col s4 m4 l4">
+            <div>
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Форма для заполнения нового термина</h3>
+                <h3>Форма для заполнения нового термина</h3>
                 <p>Через эту форму добавляются новые слова в словарик.</p>
                 <a href="/add-term" class="btn btn-primary">
                     Заполнить душевную пустоту и форму
                 </a>
             </div>
         </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <div class="col s4 m4 l4">
+            <div>
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Статистика</h3>
+                <h3>Статистика</h3>
                 <p>А здесь показана статистика по добавленным словам.</p>
-                <a href="/stats" class="btn btn-primary">
-                    Изучить(так-так-так, что тут у нас?)
-                </a>
+                <a href="/stats" class="btn btn-primary">Изучить</a>
             </div>
         </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <div class="col s4 m4 l4">
+            <div>
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
@@ -64,8 +62,8 @@
     </div>
     <h2 class="pb-2 border-bottom">Контент для погружения в язык</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
-        <div class="col-lg-6">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+        <div class="col s6 m6 l6">
+            <div>
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
@@ -74,10 +72,10 @@
                 <h3 class="fs-2">Блокнотик с полезностями</h3>
                 <p>Здесь находится список с полезным контентом для прокачки своего английскогою <br>
                 А именно:видео, фильмы, книги, статьи, тексты песен.</p>
-                <a href="/notes-list" class="btn btn-primary">Начать(ЛЭЭЭТС ГО!)</a>
+                <a href="/notes-list" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col s6 m6 l6">
             <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
@@ -88,46 +86,6 @@
                 <p>Через эту форму добавляются новые записи в блокнотик.</p>
                 <a href="/add-note" class="btn btn-primary">Заполнить душевную пустоту и форму</a>
             </div>
-        </div>
-    </div>
-    <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Разнообразить контент</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект — про математику. В условии проекта в курсе — иностранные языки. Измените содержимое страниц,
-                чтобы они были полезны в контексте изучения иностранного языка (несколько примеров есть в описании проекта).</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">НЕ разнообразить контент</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Крекс-пекс-фекс.</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Изменить вёрстку и/или дизайн-систему</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект использует <a href="https://getbootstrap.com">Bootstrap</a>. Попробуйте другие дизайн-системы, например:
-                <ul>
-                    <li><a href="https://materializecss.com">Materialize</a></li>
-                    <li><a href="https://semantic-ui.com">Semantic UI</a></li>
-                    <li><a href="https://get.foundation/templates.html">Foundation</a></li>
-                </ul>
-            </p>
-            <p>
-                Если же вам хочется оставить Bootstrap — измените вёрстку! Добавьте картинок, замените стили — словом, пробудите
-                внутреннего художника.
-            </p>
-            <p>
-                <span class="fst-italic">Вариант улучшения:</span> как правило, у сайта есть фавикон — маленькая иконка, отображающаяся
-                рядом с названием сайта во вкладке или окне браузера. Сейчас её нет — но вы можете её добавить.
-            </p>
         </div>
     </div>
 </div>
