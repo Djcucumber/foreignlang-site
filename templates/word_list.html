@@ -5,27 +5,27 @@
 {% endblock %}
 
 {% block page-lead %}
-Здесь отображаются слова для запоминания.
+Здесь отображаются слова для запоминания
 {% endblock %}
 
 {% block content %}
-<div id="notes-table">
-    <div class="row">
+<div id="words-table">
+    <div class="container">
         <div class="col s12 m12 l12">
             <table class="highlight">
                 <thead>
                    <tr>
                        <th scope="col" class="py-3">#</th>
-                       <th scope="col" class="py-3">Термин</th>
+                       <th scope="col" class="py-3">Слово</th>
                        <th scope="col" class="py-3">Транскрипция</th>
                        <th scope="col" class="py-3">Описание</th>
                    </tr>
                 </thead>
                 <tbody>
-                   {% for cnt, term, transcription, definition in terms %}
+                   {% for cnt, word, transcription, definition in words %}
                    <tr>
                       <td class="py-3">{{ cnt }}</td>
-                      <td class="py-3">{{ term }}</td>
+                      <td class="py-3">{{ word }}</td>
                       <td class="py-3">{{ transcription }}</td>
                       <td class="py-3">{{ definition }}</td>
                    </tr>

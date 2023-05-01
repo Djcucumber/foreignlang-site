@@ -1,0 +1,53 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Добавить слово
+{% endblock %}
+
+{% block page-lead %}
+Здесь Вы можете добавить слово в словарик
+{% endblock %}
+
+
+{% block content %}
+<div class="container" id="word-form">
+    <form method="post">
+        <div class="row">
+            <h3>Ваши контактные данные</h3>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <span class="black-text text-black" for="name">Ваше имя:</span>
+                <input type="text" name="name" id="name" placeholder="Умерчик" value required>
+            </div>
+            <div class="col s6">
+                <span class="black-text text-black" for="email">Ваш контактный email:</span>
+                <input type="email" class="validate" name="email" id="email" placeholder="pochta@zubdayuchtopochta.com" value required>
+            </div>
+        </div>
+        <div class="divider teal darken-2"></div>
+        <div class="row">
+            <h3>Ваше слово</h3>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <span class="black-text text-black" for="new_word" class="form-text">Слово</span>
+                <input type="text" class="form-control input-lg" name="new_word" id="new_word">
+            </div>
+            <div class="col s6">
+                <span class="black-text text-black" for="new_transcription" class="form-text">Транскрипция</span>
+                <input type="text" class="form-text" name="new_transcription" id="new_transcription">
+                <label class="helper-text">Если Вам неизвестна транскрипция, поставьте "-"</label>
+            </div>
+            <div class="col s12">
+                <span class="black-text text-black" for="new_definition">Перевод</span>
+                <textarea type="text" class="form-control input-lg" name="new_definition" id="new_definition" aria-describedby="definition_note"></textarea>
+                <label class="helper-text">Постарайтесь уложиться в одно, максимум два предложения</label>
+            </div>
+        </div>
+        <div class="section">
+            <button type="submit" class="btn waves-effect waves-teal" formaction="/send-word">Отправить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

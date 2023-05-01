@@ -11,82 +11,77 @@
 {% endblock %}
 
 {% block content %}
-<div id="project-contents">
-    <h2>Запоминание слов</h2>
-    <div class="row">
-        <div class="col s4 m4 l4">
-            <div>
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
+<div class="container" id="project-contents">
+    <h2 class="header">Запоминание слов</h2>
+        <div class="row light-blue lighten-5">
+            <div class="section col s4">
+                <div class="card hoverable small">
+                        <div class="card-title">
+                            <h3 class="section center">Словарик</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Здесь Вы можете вводить новые для Вас слова и их перевод</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="/words-list">Вау! Хочу глянуть</a>
+                        </div>
+                </div>
             </div>
-            <div>
-                <h3 class="brown-text">Словарик</h3>
-                <p>Здесь Вы можете вводить новые для Вас слова и их перевод.</p>
-                <a href="/terms-list" class="btn btn-primary">Вау! Хочу глянуть</a>
+            <div class="section col s4">
+                <div class="card hoverable small">
+                    <div class="card-title">
+                        <h3 class="section center">Форма для нового термина</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Через эту форму добавляются новые слова в словарик</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/add-word">Круто!</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col s4 m4 l4">
-            <div>
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3>Форма для заполнения нового термина</h3>
-                <p>Через эту форму добавляются новые слова в словарик.</p>
-                <a href="/add-term" class="btn btn-primary">
-                    Заполнить душевную пустоту и форму
-                </a>
-            </div>
-        </div>
-        <div class="col s4 m4 l4">
-            <div>
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3>Статистика</h3>
-                <p>А здесь показана статистика по добавленным словам.</p>
-                <a href="/stats" class="btn btn-primary">Изучить</a>
-            </div>
-        </div>
-        <div class="col s4 m4 l4">
-            <div>
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
+            <div class="section col s4">
+                <div class="card hoverable small">
+                    <div class="card-title">
+                        <h3 class="section center">Статистика</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>А здесь показана статистика по добавленным словам</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/stats">Изучить</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <h2 class="pb-2 border-bottom">Контент для погружения в язык</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
-        <div class="col s6 m6 l6">
-            <div>
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
+    <h2 class="header">Контент для погружения в язык</h2>
+        <div class="row light-blue lighten-5">
+            <div class="col s6">
+                <div class="card hoverable small">
+                    <div class="card-title">
+                        <h3 class="section center">Блокнотик с полезностями</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Здесь находится список с полезным контентом для прокачки своего английского</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/notes-list">Посмотреть</a>
+                    </div>
+                </div>
             </div>
-             <div>
-                <h3 class="fs-2">Блокнотик с полезностями</h3>
-                <p>Здесь находится список с полезным контентом для прокачки своего английскогою <br>
-                А именно:видео, фильмы, книги, статьи, тексты песен.</p>
-                <a href="/notes-list" class="btn btn-primary">Посмотреть</a>
+            <div class="col s6">
+                <div class="card hoverable small">
+                    <div class="card-title">
+                        <h3 class="center">Форма для добавления новой записи в блокнотик</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Через эту форму добавляются новые записи в блокнотик</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/add-note">Круто!</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col s6 m6 l6">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Форма для добавления новой записи в блокнотик</h3>
-                <p>Через эту форму добавляются новые записи в блокнотик.</p>
-                <a href="/add-note" class="btn btn-primary">Заполнить душевную пустоту и форму</a>
-            </div>
-        </div>
-    </div>
 </div>
 {% endblock %}

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title> Инглиш лэнгвиг
     </title>
-
     <!-- load static -->
     {% load static %}
     <!-- CSS -->
@@ -12,23 +11,36 @@
 </head>
 <body>
 <main>
-    <div class="container">
-        <header class="border-bottom">
-            <a href="/" class="blue-text text-darken-2">
-                <div class="col s12 m12 l12">
-                    <img src="{% static 'calculator.svg' %}" alt="Инглиш лэнгвиг" width="32" height="32"/>
-                    <span>Инглиш лэнгвиг</span>
-                </div>
-            </a>
-        </header>
-        <div id="title-box">
-            <div class="container-fluid py-5">
-                <h1 class="teal-text text-lighten-2">{% block page-title %}{% endblock %}</h1>
-                <p>{% block page-lead %}{% endblock %}</p>
+    <div class="navbar-fixed">
+        <nav class="cyan darken-4">
+            <div class="container">
+                <header class="nav-wrapper">
+                    <a class="brand-logo center" href="/">
+                        <div class="valign-wrapper col s12">
+                            <img class="white" src="{% static 'dog-6117498.svg' %}" alt="Cобаченька" width="32" height="32"/>
+                            <span>Инглиш лэнгвиг</span>
+                        </div>
+                    </a>
+                </header>
             </div>
+        </nav>
+    </div>
+    <div class="divider"></div>
+        <div class="cyan lighten-5"  id="title-box">
+            <div class="section">
+                <div class="container">
+                    <h1 class="cyan-text text-darken-4">{% block page-title %}{% endblock %}</h1>
+                    <div class="divider teal darken-2"></div>
+                    <p>{% block page-lead %}{% endblock %}</p>
+                </div>
+            </div>
+            <div class="divider"></div>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <div class="divider"></div>
+        <div class="section grey lighten-2" id="footer-box">
+            <footer class="footer">© 2023</footer>
+        </div>
     </div>
 </main>
 </body>

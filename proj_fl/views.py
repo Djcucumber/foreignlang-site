@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.cache import cache
-from . import terms_work
+from . import words_work
 from . import notes_work
 
 
@@ -8,27 +8,27 @@ def index(request):
     return render(request, "index.html")
 
 
-def terms_list(request):
-    terms = terms_work.get_terms_for_table()
-    return render(request, "term_list.html", context={"terms": terms})
+def words_list(request):
+    words = words_work.get_words_for_table()
+    return render(request, "word_list.html", context={"words": words})
 
 
-def add_term(request):
-    return render(request, "term_add.html")
+def add_word(request):
+    return render(request, "word_add.html")
 
 
-def send_term(request):
+def send_word(request):
     if request.method == "POST":
         cache.clear()
         user_name = request.POST.get("name")
-        new_term = request.POST.get("new_term", "")
+        new_word = request.POST.get("new_word", "")
         new_transcription = request.POST.get("new_transcription", "")
         new_definition = request.POST.get("new_definition", "").replace(";", ",")
         context = {"user": user_name}
         if len(new_definition) == 0:
             context["success"] = False
             context["comment"] = "Описание должно быть не пустым"
-        elif len(new_term) == 0:
+        elif len(new_word) == 0:
             context["success"] = False
             context["comment"] = "Термин должен быть не пустым"
         elif len(new_transcription) == 0:
@@ -37,16 +37,16 @@ def send_term(request):
         else:
             context["success"] = True
             context["comment"] = "Ваш термин принят"
-            terms_work.write_term(new_term, new_transcription, new_definition)
+            words_work.write_word(new_word, new_transcription, new_definition)
         if context["success"]:
             context["success-title"] = ""
-        return render(request, "term_request.html", context)
+        return render(request, "word_request.html", context)
     else:
-        add_term(request)
+        add_word(request)
 
 
 def show_stats(request):
-    stats = terms_work.get_terms_stats()
+    stats = words_work.get_words_stats()
     return render(request, "stats.html", stats)
 
 def notes_list(request):

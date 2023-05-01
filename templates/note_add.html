@@ -5,47 +5,47 @@
 {% endblock %}
 
 {% block page-lead %}
-Здесь Вы можете добавить запись в блокнотик. <br>
-Можете посмотреть рекомендацию фильма или наоборот посоветовать другим.
+Здесь Вы можете добавить новую запись в блокнотик
 {% endblock %}
 
 
 {% block content %}
-<div id="note-form">
+<div class="container" id="note-form">
     <form method="post">
-        <div class="row px-5 py-2">
+        <div class="row">
             <h3>Ваши контактные данные</h3>
         </div>
-        <div class="row px-5 py-2">
-            <div class="col s6 m6 l6">
-                <label for="name">Ваше имя:</label>
-                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Умерчик" value required>
+        <div class="row">
+            <div class="col s6">
+                <span class="black-text text-black" for="name">Ваше имя:</span>
+                <input type="text" name="name" id="name" placeholder="Умерчик" value required>
             </div>
-            <div class="col s6 m6 l6">
-                <label for="email">Ваш контактный email:</label>
-                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="pochta@zubdayuchtopochta.com" value required>
+            <div class="col s6">
+                <span class="black-text text-black" for="email">Ваш контактный email:</span>
+                <input type="email" class="validate" name="email" id="email" placeholder="pochta@zubdayuchtopochta.com" value required>
             </div>
         </div>
-        <div class="row px-5 py-2">
+        <div class="divider teal darken-2"></div>
+        <div class="row">
             <h3>Ваша запись</h3>
         </div>
-        <div class="row px-5 py-2">
-            <div class="col-md-4">
-                <label for="new_note">Контентик</label>
-                <input type="text" class="form-control input-lg" name="new_note" id="new_note">
+        <div class="row">
+            <div class="col s12">
+                <span class="black-text text-black" for="new_note">Контентик</span>
+                <input type="text" class="form-control input-lg" name="new_note" id="new_note" placeholder="Фильм/Видео/Книга/Статья" value required>
             </div>
-            <div class="col-md-8">
-                <label for="new_comment">Описание/комментарий</label>
-                <textarea type="text" class="form-control input-lg" name="new_comment" id="new_comment" aria-describedby="comment_note" rows="3"></textarea>
-                <div id="comment_note" class="form-text">Постарайтесь уложиться в одно, максимум два предложения</div>
+            <div class="col s12">
+                <span class="black-text text-black" for="new_comment">Описание/комментарий</span>
+                <textarea type="text" class="form-control input-lg" name="new_comment" id="new_comment" aria-describedby="comment_note"></textarea>
+                <label class="helper-text">Постарайтесь уложиться в одно, максимум два предложения</label>
             </div>
-            <div class="col-md-4">
-                <label for="new_link">Ссылка</label>
-                <textarea type="text" class="form-control input-lg" name="new_link" id="new_link" aria-describedby="link_note" rows="3"></textarea>
+            <div class="col s12">
+                <span class="black-text text-black" for="new_link">Ссылка</span>
+                <textarea type="text"  name="new_link" id="new_link" aria-describedby="link_note"></textarea>
             </div>
         </div>
-        <div class="row px-5 py-2">
-            <button type="submit" class="btn btn-primary" formaction="/send-note">Отправить</button>
+        <div class="row">
+            <button type="submit" class="btn waves-effect waves-teal" formaction="/send-note">Отправить</button>
         </div>
     </form>
 </div>
