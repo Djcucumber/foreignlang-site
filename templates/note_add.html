@@ -5,7 +5,8 @@
 {% endblock %}
 
 {% block page-lead %}
-Здесь Вы можете добавить новую запись в блокнотик
+Здесь Вы можете добавить новую запись в блокнотик <br>
+Обратите внимание, поля не должны быть пустыми!
 {% endblock %}
 
 
@@ -31,8 +32,8 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <span class="black-text text-black" for="new_note">Контентик</span>
-                <input type="text" class="form-control input-lg" name="new_note" id="new_note" placeholder="Фильм/Видео/Книга/Статья" value required>
+                <span class="black-text text-black" for="new_note">Вид контентика</span>
+                <input type="text" class="form-control input-lg" name="new_note" id="new_note" placeholder="Фильм/Сериал/Видео/Книга/Статья" value required>
             </div>
             <div class="col s12">
                 <span class="black-text text-black" for="new_comment">Описание/комментарий</span>
@@ -42,6 +43,7 @@
             <div class="col s12">
                 <span class="black-text text-black" for="new_link">Ссылка</span>
                 <textarea type="text"  name="new_link" id="new_link" aria-describedby="link_note"></textarea>
+                <label class="helper-text">Если транскрипция неизвестна, поставьте "-"</label>
             </div>
         </div>
         <div class="row">
